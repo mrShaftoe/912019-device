@@ -12,7 +12,12 @@
           Device
         </a>
 
-        <div class="search">Поиск по сайту</div><!-- В дальнейшем здесь будет форма поиска  -->
+        <div class="search">
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <input type="search" name="search" id="search-field" placeholder="Поиск по сайту">
+            <input type="submit" value="Найти">
+          </form>
+        </div>
 
         <ul class="user-navigation">
           <li class="user-navigation-login"><a href="#">Войти</a></li>
@@ -179,7 +184,7 @@
 
           <li>
             <a href="fitness_bracers.html">
-              <img src="img/popular/popular-4.svg" width="107px" height="65px" alt="Фитнес-браслет">
+              <img src="img/popular/popular-4.svg" width="107" height="65" alt="Фитнес-браслет">
               <p>Фитнес-браслеты</p>
             </a>
           </li>
@@ -285,7 +290,9 @@
           Заодно, вы сможете проверить работоспособность покупки. 
           Всякое бывает.
           </p>
-          <img src="img/map.jpg" width="560" height="222" alt="Наш офис на карте">
+          <a href="#modal-map">
+            <img src="img/map.jpg" width="560" height="222" alt="Наш офис на карте">
+          </a>  
           <a href="#" class="button">Напишите нам</a>
         </section>
       </section>
@@ -341,8 +348,29 @@
       </div>
     </footer>
 
-    <section class="modal modal-map">
+    <section class="modal modal-write-us">
+      <h2 class="visually-hidden">Форма обратно связи</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="half-width">
+          <label for="name-field">Ваше имя:</label>
+          <input type="text" name="name" id="name-field" placeholder="Имя Фамилия">
+        </div>
+        <div class="half-width">
+          <label for="email-field">Ваш email:</label>
+          <input type="email" name="email" id="email-field" placeholder="email@example.com">
+        </div>
+        <label for="letter-field">Текст письма
+          <textarea name="letter" id="letter-field" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        </label>
+        <input type="submit" value="Отправить">  
+      </form>
+      <button class="modal-close">Закрыть</button>
+    </section>
+
+    <section class="modal modal-map" id="modal-map">
+      <h2 class="visually-hidden">Карта</h2>
       <img src="img/map-big.jpg" width="960" height="559" alt="Увеличенная карта">
+      <button class="modal-close">Закрыть</button>
     </section>
   </body>
 </html>

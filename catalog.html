@@ -12,7 +12,12 @@
           Device
         </a>
 
-        <div class="search">Поиск по сайту</div><!-- В дальнейшем здесь будет форма поиска  -->
+        <div class="search">
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <input type="search" name="search" id="search-field" placeholder="Поиск по сайту">
+            <input type="submit" value="Найти">
+          </form>
+        </div>
 
         <ul class="user-navigation">
           <li class="user-navigation-profile"><a href="profile.html">Валентин Петухов</a></li>
@@ -65,7 +70,43 @@
       <section class="catalog-options-content">
         <section class="filters">
           <b class="catalog-options-heading">Фильтры</b>
-          <!-- Здесь будет форма -->
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="price-range">
+              <legend>Стоимость</legend> 
+              <!-- Стоит ли использоать legend? -->
+              <input type="range" name="cost" id="cost">
+              <!-- Понятно, что тут не range, а что вместо него - непонятно. 
+              Быть может, в нашем случае это только декоративный элемент? -->
+              <div class="min-max">
+                <span>от 0</span>
+                <span>до 5000</span>
+              </div>
+            </fieldset>
+
+            <fieldset class="colors">
+              <legend>Цвет</legend>
+              <input type="checkbox" name="color-black" id="color-black" checked>
+              <label for="color-black">Чёрный</label>
+              <input type="checkbox" name="color-white" id="color-white">
+              <label for="color-white">Белый</label>
+              <input type="checkbox" name="color-blue" id="color-blue" checked>
+              <label for="color-blue">Синий</label>
+              <input type="checkbox" name="color-red" id="color-red" checked>
+              <label for="color-red">Красный</label>
+              <input type="checkbox" name="color-pink" id="color-pink">
+              <label for="color-pink">Розовый</label>
+            </fieldset>
+
+            <fieldset class="bluetooth">
+              <legend>Bluetooth</legend>
+                <input type="radio" name="bluetooth" id="bluetooth-yes" value="1" checked>
+                <label for="bluetooth-yes">Есть</label>
+                <input type="radio" name="bluetooth" id="bluetooth-no" value="0">
+                <label for="bluetooth-no">Нет</label>
+            </fieldset>
+
+            <input type="submit" value="Показать">
+          </form>
         </section>
 
         <section class="catalog-list">
@@ -91,7 +132,7 @@
           <ul class="catalog-items-list">
             <li class="catalog-item">
               <div class="catalog-item-info">
-                <h3 class="catalog-item-heading"><a href="#">Любительская селфи-палка</a></h3>
+                <h3 class="catalog-item-title"><a href="#">Любительская селфи-палка</a></h3>
                 <b class="catalog-item-pricing">500 руб.</b>
               </div>
               <img src="img/catalog/item-1.jpg" width="360" height="380" alt="">
@@ -104,7 +145,7 @@
             
             <li class="catalog-item">
               <div class="catalog-item-info">
-                <h3><a href="#">Профессиональная селфи-палка</a></h3>
+                <h3 class="catalog-item-title"><a href="#">Профессиональная селфи-палка</a></h3>
                 <b>1 500 руб.</b>
               </div>
               <img src="img/catalog/item-2.jpg" width="360" height="380" alt="">
@@ -118,7 +159,7 @@
 
             <li class="catalog-item">
               <div class="catalog-item-info"> 
-                <h3><a href="#">Непотопляемая селфи-палка</a></h3>
+                <h3 class="catalog-item-title"><a href="#">Непотопляемая селфи-палка</a></h3>
                 <b>2 500 руб.</b>
               </div>
               <img src="img/catalog/item-3.jpg" width="360" height="380" alt="">
@@ -131,7 +172,7 @@
 
             <li class="catalog-item">
               <div class="catalog-item-info">
-                <h3><a href="#">Селфи-палка "Следуй за мной"</a></h3>
+                <h3 class="catalog-item-title"><a href="#">Селфи-палка "Следуй за мной"</a></h3>
                 <b>4 900 руб.</b>
               </div>
               <img src="img/catalog/item-4.jpg" width="360" height="380" alt="">
