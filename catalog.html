@@ -14,8 +14,8 @@
 
         <div class="search">
           <form action="https://echo.htmlacademy.ru" method="post">
-            <input type="search" name="search" id="search-field" placeholder="Поиск по сайту">
-            <input type="submit" value="Найти">
+            <input type="search" name="search" id="search-field" placeholder="Поиск по сайту" minlength="3" required>
+            <button type="submit" class="search-button">Найти</button>
           </form>
         </div>
 
@@ -72,7 +72,7 @@
           <b class="catalog-options-heading">Фильтры</b>
           <form action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="price-range">
-              <legend>Стоимость</legend> 
+              <legend class="filter-title">Стоимость</legend> 
               <!-- Стоит ли использоать legend? -->
               <input type="range" name="cost" id="cost">
               <!-- Понятно, что тут не range, а что вместо него - непонятно. 
@@ -84,28 +84,28 @@
             </fieldset>
 
             <fieldset class="colors">
-              <legend>Цвет</legend>
-              <input type="checkbox" name="color-black" id="color-black" checked>
-              <label for="color-black">Чёрный</label>
-              <input type="checkbox" name="color-white" id="color-white">
-              <label for="color-white">Белый</label>
-              <input type="checkbox" name="color-blue" id="color-blue" checked>
-              <label for="color-blue">Синий</label>
-              <input type="checkbox" name="color-red" id="color-red" checked>
-              <label for="color-red">Красный</label>
-              <input type="checkbox" name="color-pink" id="color-pink">
-              <label for="color-pink">Розовый</label>
+              <legend class="filter-title">Цвет</legend>
+              <input type="checkbox"  class="filter-item-checkbox' name="color-black" id="color-black" checked>
+              <label class="filter-item-name" for="color-black">Чёрный</label>
+              <input type="checkbox"  class="filter-item-checkbox' name="color-white" id="color-white">
+              <label class="filter-item-name" for="color-white">Белый</label>
+              <input type="checkbox"  class="filter-item-checkbox' name="color-blue" id="color-blue" checked>
+              <label class="filter-item-name" for="color-blue">Синий</label>
+              <input type="checkbox"  class="filter-item-checkbox' name="color-red" id="color-red" checked>
+              <label class="filter-item-name" for="color-red">Красный</label>
+              <input type="checkbox"  class="filter-item-checkbox' name="color-pink" id="color-pink">
+              <label class="filter-item-name" for="color-pink">Розовый</label>
             </fieldset>
 
             <fieldset class="bluetooth">
-              <legend>Bluetooth</legend>
-                <input type="radio" name="bluetooth" id="bluetooth-yes" value="1" checked>
-                <label for="bluetooth-yes">Есть</label>
-                <input type="radio" name="bluetooth" id="bluetooth-no" value="0">
-                <label for="bluetooth-no">Нет</label>
+              <legend class="filter-title">Bluetooth</legend>
+                <input type="radio" class="filter-item-radio" name="bluetooth" id="bluetooth-yes" value="1" checked>
+                <label class="filter-item-name" for="bluetooth-yes">Есть</label>
+                <input type="radio" class="filter-item-radio" name="bluetooth" id="bluetooth-no" value="0">
+                <label class="filter-item-name" for="bluetooth-no">Нет</label>
             </fieldset>
 
-            <input type="submit" value="Показать">
+            <button type="submit" class="button">Показать</button>
           </form>
         </section>
 

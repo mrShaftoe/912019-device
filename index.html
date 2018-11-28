@@ -14,8 +14,8 @@
 
         <div class="search">
           <form action="https://echo.htmlacademy.ru" method="post">
-            <input type="search" name="search" id="search-field" placeholder="Поиск по сайту">
-            <input type="submit" value="Найти">
+            <input type="search" name="search" id="search-field" placeholder="Поиск по сайту" minlength="3" required>
+            <button type="submit" class="search-button">Найти</button>
           </form>
         </div>
 
@@ -209,13 +209,13 @@
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="services-list">
           <li>
-            <button class="button button-active">Доставка</button>
+            <button type="button" class="button button-active">Доставка</button>
           </li>  
           <li>
-            <button class="button">Гарантия</button>
+            <button type="button" class="button">Гарантия</button>
           </li>  
           <li>
-            <button class="button">Контакты</button>
+            <button type="button" class="button">Контакты</button>
           </li>  
         </ul>
         <section class="services-descriptions">
@@ -290,7 +290,7 @@
           Заодно, вы сможете проверить работоспособность покупки. 
           Всякое бывает.
           </p>
-          <a href="#modal-map">
+          <a href="#modal-map" class="modal-map">
             <img src="img/map.jpg" width="560" height="222" alt="Наш офис на карте">
           </a>  
           <a href="#" class="button">Напишите нам</a>
@@ -362,15 +362,15 @@
         <label for="letter-field">Текст письма
           <textarea name="letter" id="letter-field" cols="30" rows="10" placeholder="В свободной форме"></textarea>
         </label>
-        <input type="submit" value="Отправить">  
+        <button type="submit" class="button">Отправить</button>  
       </form>
-      <button class="modal-close">Закрыть</button>
+      <button type="button" class="modal-close">Закрыть</button>
     </section>
 
     <section class="modal modal-map" id="modal-map">
       <h2 class="visually-hidden">Карта</h2>
       <img src="img/map-big.jpg" width="960" height="559" alt="Увеличенная карта">
-      <button class="modal-close">Закрыть</button>
+      <button type="button" class="modal-close">Закрыть</button>
     </section>
   </body>
 </html>
