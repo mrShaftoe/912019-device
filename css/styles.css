@@ -1,0 +1,384 @@
+
+@font-face {
+  font-family: "Gilroy";
+  src: 
+    url("fonts/gilroylight.woff") format("woff"),
+    url("fonts/gilroylight.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+  */
+@font-face {
+  font-family: "Gilroy";
+  src: 
+    url("fonts/gilroyextrabold.woff") format("woff"),
+    url("fonts/gilroyextrabold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("fonts/opensanslight.woff") format("woff"),
+    url("fonts/opensanslight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans Regular";
+  src:
+    url("fonts/opensans.woff") format("woff"),
+    url("fonts/opensans.woff2") format("woff2");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  opacity: 0.6;
+}
+
+a:active,
+.sorting a[href] {
+  opacity: 0.3;
+}
+
+.main-header {
+  background-color: #f7e296;
+}
+
+.logo {  
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.user-navigation{
+  list-style: none;
+  font-family:"Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.search input {
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.search input::placeholder {
+  font-family:"Open Sans", "Arial", sans-serif;
+  opacity: 0.3;
+}
+
+.search input:hover::placeholder {
+  opacity: 0.6;
+}
+
+.search input:focus {
+  border-bottom: 2px solid #000000;
+}
+
+.search-button {
+  font-family:"Open Sans", "Arial", sans-serif;
+  border: 2px solid black;
+  background-color: transparent;
+  margin-left: -5px;
+  outline: none;
+}
+.search-button:hover,
+.search-button:focus{
+  border: 2px solid black;
+  background-color: #000000;
+  color: #ffffff;
+  margin-left: -5px;
+}
+.search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.menu {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.menu a:hover,
+.menu a:focus {
+  opacity: 0.6;
+}
+
+.menu a:active {
+  opacity: 0.3;
+}
+.menu-second {
+  font-family:"Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  list-style: none;
+  padding: 0;
+  text-transform: none;
+}
+
+.button {
+  font-family:"Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+
+  text-align: center;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  background-color: transparent;
+  background-image: linear-gradient(to top, transparent 40%, #f0c52e 40%, #f0c52e 62.5%, transparent 62.5%);
+  border: 0;
+  padding: 10px 40px;
+  outline: none;
+
+}
+
+.button:hover,
+.button:focus {
+  opacity: 1;
+  background-image: none;
+  background-color: #f0c52e;
+}
+
+.button:active {
+  color: rgba(0, 0, 0, 0.3)
+}
+
+.carousel-slides {
+  list-style: none;
+}
+
+.carousel-slide-number {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 180px;
+  line-height: 180px;
+  color: #ffffff;
+}
+
+.carousel-slide-slogan {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 47px;
+  line-height: 56px;
+}
+
+.carousel-slide-text{
+  font-family:"Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+}
+.carousel-slide-parameters th {
+  font-family:"Open Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.carousel-slide-parameters td {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.catalog-categories-list {
+  list-style: none;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+}
+.catalog-categories-list img {
+  background-color: rgba(240, 197, 46, 0.5);
+}
+.catalog-categories-list a:hover,
+.catalog-categories-list a:focus {
+  opacity: 1;
+}
+
+.catalog-categories-list a:hover img,
+.catalog-categories-list a:focus img {
+  background-color: rgba(240, 197, 46, 1);
+}
+
+.catalog-categories-list a:active p{
+  color: rgba(0, 0, 0, 0.3);
+}
+.services {
+  background-color: #e5e5e5;
+}
+.services-list {
+  list-style: none;
+}
+
+.services-description-heading {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 47px;
+  line-height: 48px;
+}
+.services-list .button:active {
+  background-color: #000000;
+  color: #f7e184;
+  background-image: none;
+}
+.services-descriptions p {
+  font-family:"Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.vendors-list {
+  list-style: none;
+}
+
+.company-info {
+  font-family:"Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+}
+
+.company-info p {
+  font-family:"Open Sans", "Arial", sans-serif;
+}
+
+.main-footer .logo {
+  color: #ffc600;
+}
+
+
+.main-footer a {
+  color: #ffffff;
+}
+
+
+
+.footer-address, 
+.footer-phone {
+  font-family:"Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.social {
+  list-style: none;
+}
+.modal.modal-map {
+  display: none;
+}
+.modal input,
+.modal textarea {
+  outline: none;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.modal input:hover,
+.modal textarea:hover {
+  background-color: #eaeaea;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+  background-color: #ffffff;
+  outline: 3px solid #f7e296;
+}
+
+.modal input:invalid {
+  background-color: #f6dada;
+  outline: none;
+}
+.modal label
+{
+  font-family:"Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+}
+
+.page-item-title {
+  font-family:"Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 47px;
+  line-height: 48px;
+}
+
+.breadcrumbs {
+  list-style: none;
+  font-family:"Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  opacity: 0.3;
+}
+.catalog-options-heading {
+  font-family:"Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+fieldset {
+  border: none;
+}
+
+  .filter-title, .catalog-item-title, .button-back, 
+.button-forward {
+  font-family:"Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+}
+
+
+
+.filter-item-name,
+.catalog-item-price {
+  font-family:"Open Sans", "Arial", sans-serif;
+}
+
+.modal, .sorting-type {
+  font-family: "Open Sans Regular", "Arial", sans-serif;
+}
+
+.sorting ul {
+  list-style: none;
+}
+
+.catalog-items-list {
+  list-style: none;
+}
+
+.compare-add {
+  font-family: "Open Sans Regular", "Arial", sans-serif;
+  opacity: 0.5;
+}
+
+.min-max{
+  font-family: "Gilroy", "Arial", sans-serif;
+  opacity: 0.3;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.main-footer {
+  background-color: #464646;
+}

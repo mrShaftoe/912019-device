@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
   </head>
@@ -69,14 +71,11 @@
 
       <section class="catalog-options-content">
         <section class="filters">
-          <b class="catalog-options-heading">Фильтры</b>
+          <b class="catalog-options-heading">Фильтр</b>
           <form action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="price-range">
               <legend class="filter-title">Стоимость</legend> 
-              <!-- Стоит ли использоать legend? -->
               <input type="range" name="cost" id="cost">
-              <!-- Понятно, что тут не range, а что вместо него - непонятно. 
-              Быть может, в нашем случае это только декоративный элемент? -->
               <div class="min-max">
                 <span>от 0</span>
                 <span>до 5000</span>
@@ -133,7 +132,7 @@
             <li class="catalog-item">
               <div class="catalog-item-info">
                 <h3 class="catalog-item-title"><a href="#">Любительская селфи-палка</a></h3>
-                <b class="catalog-item-pricing">500 руб.</b>
+                <b class="catalog-item-price">500 руб.</b>
               </div>
               <img src="img/catalog/item-1.jpg" width="360" height="380" alt="">
               
@@ -146,7 +145,7 @@
             <li class="catalog-item">
               <div class="catalog-item-info">
                 <h3 class="catalog-item-title"><a href="#">Профессиональная селфи-палка</a></h3>
-                <b>1 500 руб.</b>
+                <b class="catalog-item-price">1 500 руб.</b>
               </div>
               <img src="img/catalog/item-2.jpg" width="360" height="380" alt="">
               
@@ -160,7 +159,7 @@
             <li class="catalog-item">
               <div class="catalog-item-info"> 
                 <h3 class="catalog-item-title"><a href="#">Непотопляемая селфи-палка</a></h3>
-                <b>2 500 руб.</b>
+                <b class="catalog-item-price">2 500 руб.</b>
               </div>
               <img src="img/catalog/item-3.jpg" width="360" height="380" alt="">
               
@@ -173,7 +172,7 @@
             <li class="catalog-item">
               <div class="catalog-item-info">
                 <h3 class="catalog-item-title"><a href="#">Селфи-палка "Следуй за мной"</a></h3>
-                <b>4 900 руб.</b>
+                <b class="catalog-item-price">4 900 руб.</b>
               </div>
               <img src="img/catalog/item-4.jpg" width="360" height="380" alt="">
               
@@ -213,7 +212,7 @@
       <div class="middle-section">
         <p class="footer-address">г. Москва, ул. Строителей, 15</p>
         
-        <ul class="footer-services">
+        <ul class="menu">
           <li>
             <a href="delivery.html">Доставка</a>
           </li>  
