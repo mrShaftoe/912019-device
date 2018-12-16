@@ -697,10 +697,23 @@ img {
   padding: 0;
 }
 
-.vendors-list li:not(:last-child) {
+.vendors-list .vendors-list-item:not(:last-child) {
   margin-right: 40px;
 }
 
+.vendors-list-item > a > img:last-child {
+  display: none;
+}
+
+.vendors-list-item > a:focus > img:first-child,
+.vendors-list-item > a:hover > img:first-child {
+  display: none;
+}
+
+.vendors-list-item > a:focus > img:last-child,
+.vendors-list-item > a:hover > img:last-child {
+  display: block;
+} 
 .company-info {
   display: flex;
   justify-content: space-between;
