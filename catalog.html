@@ -134,11 +134,23 @@
             <div class="catalog-options-heading">Фильтр:</div>
             <form action="https://echo.htmlacademy.ru" method="post" class="filter-form">
               <fieldset class="price-range filter-section">
-                <legend class="filter-title">Стоимость</legend> 
-                <input type="range" name="cost" id="cost">
-                <div class="min-max">
-                  <span>от 0</span>
-                  <span>до 5000</span>
+                <legend class="filter-title">Стоимость</legend>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min"></div>
+                    <div class="toggle toggle-max"></div>
+                  </div>
+                  <div class="price-controls">
+                    <label class="min-price"> от
+                      <input type="text" name="min-price" value="0">
+                    </label>
+                    <label class="max-price"> до
+                      <input type="text" name="max-price" value="5000">
+                    </label>
+                  </div>
                 </div>
               </fieldset>
 

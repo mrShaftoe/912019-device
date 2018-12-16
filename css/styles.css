@@ -1199,8 +1199,64 @@ img {
 .filter-item {
   padding-left: 40px;
 }
+.range-controls {
+  position: relative;
+  height: 20px;
+  padding: 9px 0;
+  margin-bottom: 5px;
+}
 
+.range-controls .scale {
+  height: 2px;
+  background-color: #dbdbdb;
+  margin-bottom: 20px;
+}
 
+.range-controls .bar {
+  height: 2px;
+  width: 120px;
+  background-color: #91c92f;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ababab;
+  border: 9px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: -1px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 0;
+}
+
+.range-controls .toggle-max {
+  left: 120px;
+}
+
+.price-controls{
+  font-size: 0;
+  opacity: 0.3;
+}
+
+.price-controls label {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0;
+  display: inline-block;
+  width: 50%;
+}
+
+.price-controls input {
+  width: 60px;
+  border: none;
+  background-color: transparent;
+}
 
 .filter-option-checkbox + label::before  {
   content: "";
@@ -1561,13 +1617,7 @@ img {
   opacity: 0.5;
 }
 
-.min-max{
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0;
-  opacity: 0.3;
-}
+
 
 .visually-hidden {
   position: absolute;
