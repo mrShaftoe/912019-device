@@ -68,9 +68,7 @@ img {
 .container {
   width: 1200px;
   padding: 40px 20px;
-  padding-bottom: 0px;
   margin: 0 auto;
- 
 }
 
 .main-header {
@@ -320,7 +318,7 @@ img {
   padding: 8px 40px;
   outline: none;
 }
-/* Кнопка при помощи псевдоэлемента https://codepen.io/mrshaftoe/pen/LXoRBp */
+
 .button:hover,
 .button:focus {
   opacity: 1;
@@ -332,6 +330,10 @@ img {
   color: rgba(0, 0, 0, 0.3)
 }
 
+main > .container,
+main.container {
+  padding: 0 20px;
+}
 .carousel {
   margin-top: -125px;
   position: relative;
@@ -566,10 +568,6 @@ img {
 }
 
 .services {
- 
-  display: flex;
-  position: relative;
-  margin-bottom: 100px;
   background-image: linear-gradient(
     to bottom, 
     transparent 100px,
@@ -577,14 +575,12 @@ img {
    );
 }
 
-.services::before {
-  content: "";
-  width: 100vw;
-  height: 100%;
-  position: absolute;
-  left: calc((1160px - 100vw) / 2);
-  z-index: -1;
-  background-image: inherit;
+.services .container{
+ 
+  display: flex;
+  position: relative;
+  margin-bottom: 100px;
+  padding: 0px 20px;
 }
 
 .services-list {
@@ -803,12 +799,12 @@ img {
 .main-footer {
   margin: 0;
   background-color: #464646;
-  padding-bottom: 60px;
 }
 
 .main-footer .container {
   margin: 0 auto;
-  padding-top: 65px;
+  padding: 60px 0;
+  background-color: #464646;
 }
 .main-footer .logo {
   color: #ffc600;
@@ -1075,9 +1071,6 @@ img {
   transform: rotate(-45deg);
 }
 
-.modal-map {
-  
-}
 
 .page-item-title {
   font-family:"Gilroy", "Arial", sans-serif;
@@ -1142,14 +1135,13 @@ img {
 .filters {
   display: flex;
   flex-direction: column;
+  width: 300px;
   margin-right: 60px;
-  width: 240px;
-  padding-right: 40px;
   background-color: rgba(0, 0, 0, 0.05);
   position: relative;
 }
 
-.filters::before {
+/* .filters::before {
   content: "";
   width: calc(80px + (100vw - 1200px) / 2);
   height: 100%;
@@ -1158,19 +1150,11 @@ img {
   top: 0;
   left: calc(((1200px - 100vw) / 2) - 80px);
 }
-
-.filters::after{
-  content: "";
-  width: 30px;
-  height: 100%;
-  background-color: inherit;
-  position: absolute;
-  top: 0;
-  right: -30px;
-}
+*/
 
 .filters .filter-form {
-  width: 200px;
+  padding-left: 60px;
+  padding-right: 40px;
 }
 
 .filter-title {
@@ -1335,9 +1319,10 @@ img {
   margin-bottom: 70px;
   position: relative;
   background-color: rgba(0, 0, 0, 0.05);
+  padding-left: 60px;
 }
 
-.filters .catalog-options-heading::before {
+/* .filters .catalog-options-heading::before {
   content: "";
   width: calc(140px + (100vw - 1200px) / 2);
   height: 100%;
@@ -1345,16 +1330,17 @@ img {
   position: absolute;
   top: 0;
   left: calc(((1200px - 100vw) / 2) - 140px);
-}
 
+} */
+.filters::after,
 .filters .catalog-options-heading::after {
   content: "";
-  width: 70px;
+  width: 30px;
   height: 100%;
   background-color: inherit;
   position: absolute;
   top: 0;
-  right: -70px;
+  right: -30px;
 }
 
 .sorting {
@@ -1364,7 +1350,6 @@ img {
 
 .catalog-list {
   width: 800px;
-  padding-left: 40px;
 }
 
 .sorting,
@@ -1382,6 +1367,7 @@ img {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   padding: 23px 0;
+  padding-left: 40px;
 }
 
 .sorting {
@@ -1389,25 +1375,25 @@ img {
   position: relative;
 }
 
-.sorting::before {
+ .sorting::before {
   content:"";
-  width: 70px;
+  width: 30px;
   height: 100%;
   background-color: inherit;
   position: absolute;
   top: 0;
-  left: -70px;
+  left: -30px;
 }
 
 .sorting::after {
   content: "";
-  width: calc(20px + (100vw - 1200px) / 2);
+  width: calc((100vw - 1160px) / 2);
   height: 100%;
   background-color: inherit;
   position: absolute;
   top: 0;
-  right: calc(((1200px - 100vw) / 2) - 20px);
-}
+  right: calc((1160px - 100vw) / 2);
+} 
 
 .sorting-type {
   width: 300px;
@@ -1469,6 +1455,7 @@ img {
 .catalog-items-list {
   list-style: none;
   padding: 0;
+  padding-left: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
