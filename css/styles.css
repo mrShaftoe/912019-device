@@ -1176,9 +1176,19 @@ main.container {
           flex-direction: column;
 }
 
-.modal-map {
-  height: 559px;
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+  border: none;
 }
+
+.modal-map img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .modal input,
 .modal textarea {
   outline: none;
@@ -1235,6 +1245,7 @@ main.container {
   right: 20px;
   cursor: pointer;
   outline: none;
+  z-index: 3;
 }
 
 .modal-close:hover,

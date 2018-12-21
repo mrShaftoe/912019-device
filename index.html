@@ -442,7 +442,7 @@
             <a href="#modal-map" class="map">
               <img src="img/map.jpg" width="560" height="222" alt="Наш офис на карте">
             </a>  
-            <a href="#" class="button">Напишите нам</a>
+            <a href="#" class="button write-us-button">Напишите нам</a>
           </section>
         </section>
       </div>
@@ -564,8 +564,45 @@
 
     <section class="modal modal-map" id="modal-map">
       <h2 class="visually-hidden">Карта</h2>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A969adbf8f4ece417eeabdedcb9ced0ec51a6eba38841b8e9f7078564067c1f3d&amp;source=constructor" width="960" height="559" frameborder="0"></iframe>
       <img src="img/map-big.jpg" width="960" height="559" alt="Увеличенная карта">
+      
       <button type="button" class="modal-close">Закрыть</button>
     </section>
+
+    <script>
+      var writeUs = document.querySelector(".write-us-button");
+
+      var modalWriteUs = document.querySelector(".modal-write-us");
+      var writeUsClose = modalWriteUs.querySelector(".modal-close");
+      
+      var form = modalWriteUs.querySelector("form");
+      var name = form.querySelector("[name=name]");
+      var email = form.querySelector("[name=email]");
+      var letter = form.querySelector("[name=letter]");
+
+      writeUs.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        modalWriteUs.classList.add("modal-show");
+      });
+
+      writeUsClose.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        modalWriteUs.classList.remove("modal-show");
+      });
+
+      var map = document.querySelector(".map");
+      var modalMap = document.querySelector(".modal-map");
+      var modalMapClose = modalMap.querySelector(".modal-close");
+
+      map.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        modalMap.classList.add("modal-show");
+      });
+
+      modalMapClose.addEventListener("click", function(evt) {
+        modalMap.classList.remove("modal-show");
+      });
+    </script>
   </body>
 </html>
