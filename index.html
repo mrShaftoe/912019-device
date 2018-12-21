@@ -36,7 +36,7 @@
       
       
     </svg>
-    <div class="container">
+    <div class="header container">
       <header class="main-header">
         
           <a class="logo">Device</a>
@@ -44,7 +44,7 @@
           <div class="top-line">
             <div class="search">
               <form action="https://echo.htmlacademy.ru" method="post">
-                <input type="search" name="search" id="search-field" placeholder="Поиск по сайту" required>
+                <input type="search" name="search" id="search-field" placeholder="Поиск по сайту" minlength="3" pattern="\w+" required>
                 <button type="submit" class="search-button">Найти</button>
               </form>
             </div>
@@ -52,7 +52,7 @@
             <ul class="user-navigation">
               <li class="user-navigation-login">
                 <a href="#">
-                  <svg>
+                  <svg width="13" height="12">
                     <use xlink:href="#icon-user"/>
                   </svg>
                   Войти
@@ -60,7 +60,7 @@
               </li>
               <li class="user-navigation-compare">
                 <a href="compare.html">
-                  <svg>
+                  <svg width="10" height="10">
                     <use xlink:href="#icon-compare"/>
                   </svg>
                   Сравнить
@@ -68,7 +68,7 @@
               </li>
               <li class="user-navigation-cart">
                 <a href="cart.html">
-                    <svg>
+                    <svg width="12" height="12"> 
                       <use xlink:href="#icon-cart"/>
                     </svg>
                   Корзина
@@ -87,7 +87,7 @@
                     <li><a href="action_cameras.html">Экшн-камеры</a></li>
                   </ul>
                   <ul>
-                    <li><a href="fitness_bracers.html">Фитнес-браслеты</a></li>
+                    <li><a href="fitness_bracers.html">Фитнес&#8209;браслеты</a></li>
                     <li><a href="smart_watches.html">Умные часы</a></li>
                   </ul>
                   <ul>
@@ -362,7 +362,7 @@
             </li>  
           </ul>
           <section class="services-descriptions">
-            <section class="delivery-description" data-active id="#delivery">
+            <section class="delivery-description service-description" data-active id="#delivery">
               <h3 class="services-description-heading">Доставка</h3>
               <p>
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду 
@@ -393,27 +393,27 @@
           <h2 class="visually-hidden">Производители</h2>
             <ul class="vendors-list">
               <li class="vendors-list-item">
-                <a href="#">
-                  <img src="img/vendor-logos/logo-1-bw.png" width="260" height="100" alt="Логотип DJI">
-                  <img src="img/vendor-logos/logo-1.png" width="260" height="100" alt="Логотип DJI">
+                <a href="#" class="vendor-link">
+                  <img class="vendor-image-grayscale" src="img/vendor-logos/logo-1-bw.png" width="260" height="100" alt="Логотип DJI">
+                  <img class="vendor-image-colored" src="img/vendor-logos/logo-1.png" width="260" height="100" alt="Логотип DJI">
                 </a>
               </li>
               <li class="vendors-list-item">
-                <a href="#">
-                  <img src="img/vendor-logos/logo-2-bw.png" width="260" height="100" alt="Логотип SP Gadgets">
-                  <img src="img/vendor-logos/logo-2.png" width="260" height="100" alt="Логотип SP Gadgets">
+                <a href="#" class="vendor-link">
+                  <img class="vendor-image-grayscale" src="img/vendor-logos/logo-2-bw.png" width="260" height="100" alt="Логотип SP Gadgets">
+                  <img class="vendor-image-colored" src="img/vendor-logos/logo-2.png" width="260" height="100" alt="Логотип SP Gadgets">
                 </a>
               </li>
               <li class="vendors-list-item">
-                <a href="#">
-                  <img src="img/vendor-logos/logo-3-bw.png" width="260" height="100" alt="Логотип GoPro"> 
-                  <img src="img/vendor-logos/logo-3.png" width="260" height="100" alt="Логотип GoPro"> 
+                <a href="#" class="vendor-link">
+                  <img class="vendor-image-grayscale" src="img/vendor-logos/logo-3-bw.png" width="260" height="100" alt="Логотип GoPro"> 
+                  <img class="vendor-image-colored" src="img/vendor-logos/logo-3.png" width="260" height="100" alt="Логотип GoPro"> 
                 </a>
               </li>
               <li class="vendors-list-item">
-                <a href="#">
-                  <img src="img/vendor-logos/logo-4-bw.png" width="260" height="100" alt="Логотип Vive">
-                  <img src="img/vendor-logos/logo-4.png" width="260" height="100" alt="Логотип Vive">
+                <a href="#" class="vendor-link">
+                  <img class="vendor-image-grayscale" src="img/vendor-logos/logo-4-bw.png" width="260" height="100" alt="Логотип Vive">
+                  <img class="vendor-image-colored" src="img/vendor-logos/logo-4.png" width="260" height="100" alt="Логотип Vive">
                 </a>
               </li>
           </ul>
@@ -451,30 +451,30 @@
     <footer class="main-footer">
       <div class="container">
         <div class="top-section">
-          <a class="logo">
-            Device
-          </a>            
+          <a class="logo">Device</a>            
 
           <ul class="user-navigation">
             <li class="user-navigation-login">
               <a href="#">
-                <svg>
+                <svg width="13" height="12">
                   <use xlink:href="#icon-user"/>
                 </svg>
                 Войти
               </a>
             </li>
+
             <li class="user-navigation-compare">
               <a href="compare.html">
-                <svg>
+                <svg width="10" height="10">
                   <use xlink:href="#icon-compare"/>
                 </svg>
                 Сравнить
               </a>
             </li>
+
             <li class="user-navigation-cart">
               <a href="cart.html">
-                  <svg>
+                  <svg width="12" height="12"> 
                     <use xlink:href="#icon-cart"/>
                   </svg>
                 Корзина
@@ -505,7 +505,7 @@
           <ul class="social">
             <li>
               <a href="https://facebook.com" class="social-button social-button-fb">
-                <svg>
+                <svg width="32" height="32">
                   <use xlink:href="#icon-fb"/>
                 </svg>
                 Facebook
@@ -513,7 +513,7 @@
             </li>
             <li>
               <a href="https://instagram.com" class="social-button social-button-instagram">
-                <svg>
+                <svg  width="32" height="32">
                   <use xlink:href="#icon-instagram"/>
                 </svg>
                 Instagram
@@ -521,7 +521,7 @@
             </li>
             <li>
               <a href="https://twitter.com" class="social-button social-button-twitter">
-                <svg>
+                <svg  width="32" height="32">
                   <use xlink:href="#icon-twitter"/>
                 </svg>
                 Twitter
@@ -530,7 +530,7 @@
           </ul>
           
           <a href="https://htmlacademy.ru/intensive/htmlcss"  class="htmlacademy">
-            <svg>
+            <svg width="27" height="34">
               <use xlink:href="#icon-htmlacademy"/>
             </svg>
           </a>

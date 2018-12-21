@@ -34,16 +34,14 @@
           <path fill="#FFC600" d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/>
         </symbol> 
     </svg>
-    <div class="container">
+    <div class="header container">
       <header class="main-header">
-        <a class="logo" href="index.html">
-          Device
-        </a>
+        <a class="logo" href="index.html">Device</a>
         
         <div class="top-line">
           <div class="search">
             <form action="https://echo.htmlacademy.ru" method="post">
-              <input type="search" name="search" id="search-field" placeholder="Поиск по сайту" required>
+              <input type="search" name="search" id="search-field" placeholder="Поиск по сайту" minlength="3" required>
               <button type="submit" class="search-button">Найти</button>
             </form>
           </div>
@@ -52,7 +50,7 @@
           <ul class="user-navigation">
             <li class="user-navigation-login">
               <a href="#">
-                <svg>
+                <svg width="13" height="12">
                   <use xlink:href="#icon-user"/>
                 </svg>
                 Валентин Петухов
@@ -61,7 +59,7 @@
             <li class="user-navigation-logout"><a href="#">Выйти</a></li>
             <li class="user-navigation-compare">
               <a href="compare.html">
-                <svg>
+                <svg width="10" height="10">
                   <use xlink:href="#icon-compare"/>
                 </svg>
                 Сравнить
@@ -69,7 +67,7 @@
             </li>
             <li class="user-navigation-cart">
               <a href="cart.html">
-                  <svg>
+                  <svg width="12" height="12"> 
                     <use xlink:href="#icon-cart"/>
                   </svg>
                 Корзина
@@ -112,8 +110,8 @@
       </header>
     </div>
 
-    <main class="container">
-      <div class="inner">
+    <main>
+      <div class=" container inner">
         <h1 class="page-item-title">
           Моноподы для селфи
         </h1>
@@ -129,8 +127,8 @@
           </li>
         </ul>
       </div>
-        
-        <section class="catalog-options-content">
+      <div class="overflow-eraser">
+        <section class="container catalog-options-content">
           <section class="filters">
             <div class="catalog-options-heading">Фильтр:</div>
             <form action="https://echo.htmlacademy.ru" method="post" class="filter-form">
@@ -294,7 +292,7 @@
             </div>
           </section>
         </section>
-      
+      </section>
     </main>
 
     <footer class="main-footer">
@@ -307,7 +305,7 @@
           <ul class="user-navigation">
             <li class="user-navigation-login">
               <a href="#">
-                <svg>
+                <svg width="13" height="12">
                   <use xlink:href="#icon-user"/>
                 </svg>
                 Валентин Петухов
@@ -316,15 +314,16 @@
             <li class="user-navigation-logout"><a href="#">Выйти</a></li>
             <li class="user-navigation-compare">
               <a href="compare.html">
-                <svg>
+                <svg width="10" height="10">
                   <use xlink:href="#icon-compare"/>
                 </svg>
                 Сравнить
               </a>
             </li>
+
             <li class="user-navigation-cart">
               <a href="cart.html">
-                  <svg>
+                  <svg width="12" height="12"> 
                     <use xlink:href="#icon-cart"/>
                   </svg>
                 Корзина
@@ -358,25 +357,23 @@
           <ul class="social">
             <li>
               <a href="https://facebook.com" class="social-button social-button-fb">
-                <svg>
+                <svg width="32" height="32">
                   <use xlink:href="#icon-fb"/>
                 </svg>
                 Facebook
               </a>
             </li>
-
             <li>
               <a href="https://instagram.com" class="social-button social-button-instagram">
-                <svg>
+                <svg  width="32" height="32">
                   <use xlink:href="#icon-instagram"/>
                 </svg>
                 Instagram
               </a>
             </li>
-            
             <li>
               <a href="https://twitter.com" class="social-button social-button-twitter">
-                <svg>
+                <svg  width="32" height="32">
                   <use xlink:href="#icon-twitter"/>
                 </svg>
                 Twitter
