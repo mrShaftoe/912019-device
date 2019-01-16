@@ -1404,11 +1404,6 @@ img {
   overflow-x: hidden;
 }
 
-.container.catalog-options-content {
-  padding: 0 20px;
-  width: 1200px;
-}
-
 .catalog-options-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1480,7 +1475,7 @@ img {
   padding: 0;
 }
 
-.filter-form fieldset {
+.filter-form .filter-section {
   margin: 0;
   padding: 0;
   border: none;
@@ -1657,7 +1652,6 @@ img {
 .sorting {
   background-color: rgba(0, 0, 0, 0.05);
 }
-
 
 .catalog-list {
   width: 800px;
