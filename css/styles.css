@@ -94,6 +94,7 @@ img {
   line-height: 48px;
   letter-spacing: 0.01em;
   text-transform: uppercase;
+  vertical-align: middle;
 }
 
 .logo:hover,
@@ -251,7 +252,6 @@ img {
 .user-navigation-logout {
   margin-left: 20px;
   opacity: 0.3;
-  
 }
 
 .menu {
@@ -399,20 +399,20 @@ img {
   color: rgba(0, 0, 0, 0.3)
 }
 
-main > .container {
-  padding: 0 20px;
-}
-
 .carousel {
   margin-top: -35px;
   position: relative;
   margin-bottom: 103px;
+  width: 1160px;
+  overflow: hidden;
 }
 
 .carousel-slides {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 400%;
+  display: flex;
 }
 
 .carousel-slides-item {
@@ -438,6 +438,7 @@ main > .container {
     #f7e296 110px,
     transparent 110px
   );
+  
 }
 
 .carousel-slide-image {
@@ -462,10 +463,6 @@ main > .container {
   width: 220px;
   display: block;
   margin-bottom: 46px;
-}
-
-#slide-2, #slide-3 {
-  display: none;
 }
 
 .carousel-slide-number {
@@ -561,13 +558,14 @@ main > .container {
   right: 82px;
   bottom: 150px;
   margin: 0;
+  z-index: 2;
 }
 
 .carousel-pagination-item:not(:first-child):not(:last-child) {
   margin: 0 auto;
 }
 
-.carousel-pagination-item a{
+.carousel-pagination-item label{
   display: block;
   font-size: 0;
   width: 12px;
@@ -575,9 +573,12 @@ main > .container {
   border: 1px solid #000000;
   border-radius: 50%;
   position: relative;
+  cursor: pointer;
 }
 
-.carousel-pagination-item a:not([href])::after {
+#carousel-radio-1:checked ~ .carousel-pagination label[for="carousel-radio-1"]::after, 
+#carousel-radio-2:checked ~ .carousel-pagination label[for="carousel-radio-2"]::after,
+#carousel-radio-3:checked ~ .carousel-pagination label[for="carousel-radio-3"]::after {
   content: "";
   position: absolute;
   height: 6px;
@@ -588,6 +589,14 @@ main > .container {
   left: 50%;
   margin-left: -3px;
   margin-top: -3px;
+}
+
+#carousel-radio-2:checked ~ .carousel-slides {
+  transform: translate(-1160px);
+}
+
+#carousel-radio-3:checked ~ .carousel-slides {
+  transform: translate(-2320px);
 }
 
 .catalog {
@@ -738,6 +747,8 @@ main > .container {
   text-align: center;
   display: block;
   padding: 8px 0;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .services-list .button:active,
@@ -1513,6 +1524,7 @@ main > .container {
   line-height: 24px;
   letter-spacing: 0;
   display: inline-block;
+  vertical-align: middle;
 }
 
 .price-controls .max-price {
@@ -1798,7 +1810,7 @@ main > .container {
   margin-bottom: 32px;
 }
 
-.catalog-item:last-child .catalog-item-image::after {
+.new::after {
   content: "NEW";
   width: 60px;
   height: 60px;
@@ -1820,6 +1832,7 @@ main > .container {
   font-weight: 800;
   font-size: 14px;
   line-height: 24px;
+  z-index: 1;
 }
 
 .catalog-item-info {
@@ -1882,6 +1895,7 @@ main > .container {
   width: 100%;
   height: 380px;
   background-color: rgba(238, 238, 238, 0.7);
+  z-index:2;
 }
 
 .catalog-pagination {
