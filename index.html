@@ -359,41 +359,46 @@
       <section class="services">
         <div class="container">
           <h2 class="visually-hidden">Преимущества</h2>
+          <input type="radio" checked name="another-toggle" id="service-1" class="visually-hidden">
+          <input type="radio" name="another-toggle" id="service-2" class="visually-hidden">
+          <input type="radio" name="another-toggle" id="service-3" class="visually-hidden">
           <ul class="services-list">
             <li>
-              <a class="button">Доставка</a>
+              <label class="button" for="service-1">Доставка</label>
             </li>  
             <li>
-              <a href="#guarantee" class="button">Гарантия</a>
+              <label class="button" for="service-2">Гарантия</label>
             </li>  
             <li>
-              <a href="#credit" class="button">Кредит</a>
+              <label class="button"  for="service-3">Кредит</label>
             </li>  
-            
           </ul>
+
           <section class="services-descriptions">
-            <section class="delivery-description service-description" data-active id="#delivery">
-              <h3 class="services-description-heading">Доставка</h3>
-              <p>
-              Мы с удовольствием доставим ваш товар прямо к вашему подъезду 
-              совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его 
-              на ваш этаж.
-              </p>
-            </section>
-            <section class="guarantee-description service-description" id="#guarantee">
-              <h3 class="services-description-heading">Гарантия</h3>
-              <p>
-                Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
-                Товар, не дом, конечно же.
-              </p>
-            </section>
-            <section class="credit-description service-description" id="#credit">
-              <h3 class="services-description-heading">Кредит</h3>
-              <p>
-                Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные 
-                условия кредита. Выгодные для нашего банка, разумеется.
-              </p>
-            </section>
+            <div class="services-slider">
+              <section class="delivery-description service-description">
+                <h3 class="services-description-heading">Доставка</h3>
+                <p>
+                Мы с удовольствием доставим ваш товар прямо к вашему подъезду 
+                совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его 
+                на ваш этаж.
+                </p>
+              </section>
+              <section class="guarantee-description service-description">
+                <h3 class="services-description-heading">Гарантия</h3>
+                <p>
+                  Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
+                  Товар, не дом, конечно же.
+                </p>
+              </section>
+              <section class="credit-description service-description">
+                <h3 class="services-description-heading">Кредит</h3>
+                <p>
+                  Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные 
+                  условия кредита. Выгодные для нашего банка, разумеется.
+                </p>
+              </section>
+              </div>
           </section>  
         </div>
       </section>

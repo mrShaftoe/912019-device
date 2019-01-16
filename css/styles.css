@@ -749,17 +749,22 @@ img {
   padding: 8px 0;
   white-space: nowrap;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .services-list .button:active,
-.services-list .button:not([href]) {
+#service-1:checked ~ .services-list label[for="service-1"],
+#service-2:checked ~ .services-list label[for="service-2"],
+#service-3:checked ~ .services-list label[for="service-3"] {
   background-color: #000000;
   color: #f7e184;
   background-image: none;
 }
 
-.services-list .button:not([href])::after,
-.services-list .button:active::after{
+.services-list .button:active::after,
+#service-1:checked ~ .services-list label[for="service-1"]::after,
+#service-2:checked ~ .services-list label[for="service-2"]::after,
+#service-3:checked ~ .services-list label[for="service-3"]::after {
   content: "";
   position: absolute;
   top: 0;
@@ -770,8 +775,20 @@ img {
   z-index: -1;
 }
 
+#service-2:checked ~ .services-descriptions .services-slider {
+  transform: translate(-700px);
+} 
+
+#service-3:checked ~ .services-descriptions .services-slider {
+  transform: translate(-1400px);
+} 
+
+
+
 .services-descriptions {
   margin-left: 118px;
+  width: 700px;
+  overflow: hidden;
 }
 
 .services-descriptions p {
@@ -784,10 +801,16 @@ img {
   width: 460px;
 }
 
+.services-slider {
+  width: 300%;
+  display: flex;
+}
+
 .service-description {
   padding-top: 72px;
   padding-right: 231px;
   padding-bottom: 7px;
+  width: 700px;
 }
 
 .delivery-description {
@@ -810,11 +833,6 @@ img {
   background-repeat: no-repeat;
   background-clip: padding-box;
   background-position: 100%;
-}
-
-.guarantee-description,
-.credit-description {
-  display: none;
 }
 
 .vendors {
