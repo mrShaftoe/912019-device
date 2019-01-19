@@ -404,21 +404,17 @@ img {
   position: relative;
   margin-bottom: 103px;
   width: 1160px;
-  overflow: hidden;
 }
 
 .carousel-slides {
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 400%;
   display: flex;
 }
 
 .carousel-slides-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: relative;
   background-image: -webkit-linear-gradient(
     top, 
@@ -443,10 +439,12 @@ img {
 
 .carousel-slide-image {
   width: 560px;
+  height: 490px;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -590,13 +588,10 @@ img {
   margin-left: -3px;
   margin-top: -3px;
 }
-
-#carousel-radio-2:checked ~ .carousel-slides {
-  transform: translate(-1160px);
-}
-
-#carousel-radio-3:checked ~ .carousel-slides {
-  transform: translate(-2320px);
+#carousel-radio-1:checked ~ .carousel-slides .carousel-slides-item:nth-child(1),
+#carousel-radio-2:checked ~ .carousel-slides .carousel-slides-item:nth-child(2),
+#carousel-radio-3:checked ~ .carousel-slides .carousel-slides-item:nth-child(3) {
+  display: flex;
 }
 
 .catalog {
@@ -775,12 +770,10 @@ img {
   z-index: -1;
 }
 
-#service-2:checked ~ .services-descriptions .services-slider {
-  transform: translate(-700px);
-} 
-
-#service-3:checked ~ .services-descriptions .services-slider {
-  transform: translate(-1400px);
+#service-1:checked ~ .services-descriptions .delivery-description,
+#service-2:checked ~ .services-descriptions .guarantee-description,
+#service-3:checked ~ .services-descriptions .credit-description {
+  display: flex;;
 } 
 
 
@@ -801,16 +794,13 @@ img {
   width: 460px;
 }
 
-.services-slider {
-  width: 300%;
-  display: flex;
-}
 
 .service-description {
   padding-top: 72px;
   padding-right: 231px;
   padding-bottom: 7px;
   width: 700px;
+  display: none;
 }
 
 .delivery-description {
@@ -2011,12 +2001,46 @@ img {
   animation-duration: 0.6s;
 }
 
+.modal-error {
+  animation: error-modal 0.6s;
+}
+
 @keyframes show-modal {
   0% {
-    transform: translateY(2000px);
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-20px);
   }
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes error-modal {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }

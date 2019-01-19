@@ -4,7 +4,7 @@ var modalWriteUs = document.querySelector(".modal-write-us");
 var writeUsClose = modalWriteUs.querySelector(".modal-close");
 
 var form = modalWriteUs.querySelector("form");
-var name = form.querySelector("[name=name]");
+var nameField = form.querySelector("[name=name");
 var email = form.querySelector("[name=email]");
 var letter = form.querySelector("[name=letter]");
 
@@ -16,6 +16,16 @@ writeUs.addEventListener("click", function(evt) {
 writeUsClose.addEventListener("click", function(evt) {
   evt.preventDefault();
   modalWriteUs.classList.remove("modal-show");
+  modalWriteUs.classList.remove("modal-error");
+});
+
+form.addEventListener("submit",function(evt) {
+  if (!nameField.value || !email.value || !letter.value) {
+    evt.preventDefault();
+    modalWriteUs.classList.remove("modal-error");
+    modalWriteUs.offsetWidth = modalWriteUs.offsetWidth;
+    modalWriteUs.classList.add("modal-error");
+  }
 });
 
 var map = document.querySelector(".map");
@@ -29,4 +39,19 @@ map.addEventListener("click", function(evt) {
 
 modalMapClose.addEventListener("click", function(evt) {
   modalMap.classList.remove("modal-show");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (modalMap.classList.contains("modal-show")) {
+      modalMap.classList.remove("modal-show");
+      modalMap.classList.remove("modal-error");
+    }
+    
+    if (modalWriteUs.classList.contains("modal-show")) {
+      modalWriteUs.classList.remove("modal-show");
+      modalWriteUs.classList.remove("modal-error");
+    }
+  }
 });
