@@ -380,11 +380,17 @@ img {
     to bottom, 
     transparent 16px,
     #f0c52e 16px,
-    #f0c52e 23px, 
+    #f0c52e 50%, 
+    transparent 23px),
+    linear-gradient(
+    to top, 
+    transparent 16px,
+    #f0c52e 16px,
+    #f0c52e 50%, 
     transparent 23px);
   width: 200px;
   border: 0;
-  padding: 8px 0;
+  padding: 8px 5px;
   outline: none;
 }
 
@@ -716,11 +722,15 @@ img {
   padding-top: 80px;
   padding-bottom: 68px;
   border-right: 7px solid black;
+  overflow: hidden;
+  width: 277px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .services li {
   position: relative;
-  width: 277px;
   z-index: 1;
 }
 
@@ -738,12 +748,10 @@ img {
 }
 
 .services-list .button {
-  width: 161px;
+  min-width: 161px;
+  width: auto;
   text-align: center;
   display: block;
-  padding: 8px 0;
-  white-space: nowrap;
-  overflow: hidden;
   cursor: pointer;
 }
 
@@ -763,8 +771,8 @@ img {
   content: "";
   position: absolute;
   top: 0;
-  right: -1px;
-  width: 100%;
+  left: 0;
+  width: 277px;
   height: 100%;
   background-color: #000000;
   z-index: -1;
@@ -773,7 +781,7 @@ img {
 #service-1:checked ~ .services-descriptions .delivery-description,
 #service-2:checked ~ .services-descriptions .guarantee-description,
 #service-3:checked ~ .services-descriptions .credit-description {
-  display: flex;;
+  display: block;
 } 
 
 
@@ -784,7 +792,7 @@ img {
   overflow: hidden;
 }
 
-.services-descriptions p {
+.service-description p {
   font-family:"Open Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 15px;
